@@ -6,12 +6,20 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document("Student")
 public class Student {
 
-	@Id
+	@Id()
 	private int studentId;
 
 	private String studentName;
 
 	private String email;
+	
+
+	public Student(int studentId, String studentName, String email) {
+		super();
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.email = email;
+	}
 
 	public int getStudentId() {
 		return studentId;
